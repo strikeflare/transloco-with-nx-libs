@@ -6,6 +6,13 @@
   <ng-container *transloco="let t">
     <p>Root: {{ t('gps') }}</p>
   </ng-container>
+
+  <!-- newly added-->
+  <p>Inside app: {{ 'common.required' | transloco }}</p>
+  <ng-container *transloco="let t">
+    <p>Inside app: {{ t('common.required') }}</p>
+  </ng-container>
+
   <div style="display: flex; flex-direction: column">
     <transloco-with-libs-b></transloco-with-libs-b>
   </div>

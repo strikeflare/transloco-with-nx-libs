@@ -19,6 +19,9 @@
     },
     "transloco-lib-b": {
       "tags": []
+    },
+    "common": {
+      "tags": []
     }
   }
 }

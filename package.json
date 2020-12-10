@@ -25,7 +25,9 @@
     "update:check": "ng update",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "i18n:extract": "DEBUG=* transloco-keys-manager extract",
+    "i18n:find": "DEBUG=* transloco-keys-manager find -p apps/transloco-holder/src/assets/i18n"
   },
   "private": true,
   "dependencies": {
@@ -63,6 +65,8 @@
     "@types/jest": "24.0.18",
     "ts-jest": "24.1.0",
     "cypress": "3.4.1",
-    "@nrwl/cypress": "8.6.0"
+    "@nrwl/cypress": "8.6.0",
+    "ngx-build-plus": "^9.0.2",
+    "@ngneat/transloco-keys-manager": "^1.0.0"
   }
 }
