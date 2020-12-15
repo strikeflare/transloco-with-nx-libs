@@ -13,7 +13,18 @@ import { CommonComponent } from './common.component';
 })
 export class CommonsModule {
   constructor(private _translate: TranslocoService) {
-    this._translate.setTranslation(en);
-    this._translate.setTranslation(es);
+    this._translate.setTranslation(
+      {
+        common: en
+      },
+      'en'
+    );
+
+    this._translate.setTranslation(
+      {
+        common: es
+      },
+      'es'
+    );
   }
 }

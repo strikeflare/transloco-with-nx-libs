@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TRANSLOCO_SCOPE } from '@ngneat/transloco';
+import { scopeLoader } from 'scoped-translations';
 
 @Component({
   selector: 'transloco-with-libs-b',
@@ -15,7 +17,16 @@ import { Component, OnInit } from '@angular/core';
 
     <!-- common component added -->
     <transloco-with-libs-common></transloco-with-libs-common>
-  `
+  `,
+  providers: [
+    {
+      provide: TRANSLOCO_SCOPE,
+      useValue: {
+        scope: 'compB',
+        loader: scopeLoader((lang, root) => import(`./${root}/${lang}.json`))
+      }
+    }
+  ]
 })
 export class LocationBComponent implements OnInit {
   constructor() {}
